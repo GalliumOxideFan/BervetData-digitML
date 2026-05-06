@@ -8,6 +8,8 @@ testLabels = np.load('HandwrittenDigits/TestLabels.npy').flatten()
 
 correctNumbers = 0
 incorrectNumbers = 0
+d = testDigits
+foundNumbers = whichNumber(d)
 for i in range(testLabels.size):
     d = testDigits[:,i]
     foundNumber = whichNumber(d)
