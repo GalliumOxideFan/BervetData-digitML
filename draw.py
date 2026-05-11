@@ -47,7 +47,7 @@ def update_chart():
 # -----------------------
 def make_brush(r, sigma=None):
     if sigma is None:
-        sigma = r / 1.1
+        sigma = r / 0.8
 
     size = 2 * r + 1
     k = np.zeros((size, size))
@@ -61,7 +61,7 @@ def make_brush(r, sigma=None):
     k /= k.max()
     return k
 
-brush_radius = 2
+brush_radius = 1
 brush = make_brush(brush_radius)
 
 # -----------------------

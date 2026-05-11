@@ -9,15 +9,14 @@ plt.rcParams.update({   # Font size handling
         "font.size": 20,          # default for all text
     })
 
-plt.plot(x, S[3], label='Singular values for digit 3', linewidth=3)
-plt.legend()
-plt.xlabel('Singular value index')
-plt.ylabel('Singular value')
-plt.show()
+def plot(digit):
+    plt.figure(figsize=(12, 8))
+    plt.plot(x, S[digit], label=f'Singular values for digit {digit}', linewidth=3, color=(0,1-digit/10,digit/10))
+    plt.legend()
+    plt.xlabel('Singular value index')
+    plt.ylabel('Singular value')
+    plt.savefig(f'SavedImages/singularValue{digit}.pdf', bbox_inches="tight")
+    plt.show()
 
-
-plt.plot(x, S[8], 'r', label='Singular values for digit 8', linewidth=3)
-plt.legend()
-plt.xlabel('Singular value index')
-plt.ylabel('Singular value')
-plt.show()
+plot(3)
+plot(8)
