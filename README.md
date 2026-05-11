@@ -2,8 +2,6 @@
 
 This project implements a handwritten digit classifier based on Singular Value Decomposition (SVD) and low-rank subspace approximation. Each digit class (0–9) is represented by a low-dimensional linear subspace, and classification is performed by minimizing projection residuals.
 
-The project was developed as a numerical linear algebra mini-project and demonstrates how SVD can be used for image compression, feature extraction, and classification without neural networks.
-
 ---
 
 
