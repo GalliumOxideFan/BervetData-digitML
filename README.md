@@ -79,25 +79,25 @@ For each digit class:
 1. Training images are collected into a matrix
 2. Singular Value Decomposition is computed
 
-   $$
+   ```math
    A = U\Sigma V^T
-   $$
+   ```
 
 3. The first \(k\) singular vectors are used to define a low-dimensional subspace
 4. A projection matrix is constructed
 
-   $$
+   ```math
    P = U_k U_k^T
-   $$
+   ```
 
 To classify a test digit \(d\):
 
 1. Project the digit onto every digit subspace
 2. Compute reconstruction residuals
 
-   $$
+   ```math
    r_i = ||d - P_i d||
-   $$
+   ```
 
 3. Select the digit class with the smallest residual
 
@@ -110,9 +110,9 @@ The classifier was tested on a dataset of 40,000 handwritten digits.
 - Best accuracy achieved: approximately 94.9%
 - Optimal range:
 
-  $$
+  ```math
   k \approx 19 \text{ to } 20
-  $$
+  ```
 
 - Digits such as 0 and 1 were easiest to classify
 - Digits such as 5, 8, and 9 produced more misclassifications due to similar shapes
