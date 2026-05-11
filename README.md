@@ -57,6 +57,7 @@ python plotSingularImage.py
 ### Notes
 - Make sure the directories: HandwrittenDigits/, SavedImages/ and TrainingData exists.
 - The data for training the model needs to be placed in HandwrittenDigits/. Extract the archive "HandwrittenDigits.rar" here.
+- The speed of testing the test set seems to be wildly inconsistent across diffrent hardware.
 
 ### Requirements
 
