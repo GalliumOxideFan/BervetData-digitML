@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.linalg import lstsq
-def trainLM(k, numDigits=2000):
+def trainLM(k, numDigits=400):
     TrainDigits = np.load('HandwrittenDigits/TrainDigits.npy')
     TrainLabels = np.load('HandwrittenDigits/TrainLabels.npy').flatten()
 
@@ -13,10 +13,15 @@ def trainLM(k, numDigits=2000):
     print('Computing SVD...')
     U, S, Vt = np.linalg.svd(A_matri[:, :, :numDigits],compute_uv=True, full_matrices=True)
 
-    print('SVD calculation complete... \nComputing U@Ut...')
+    print(f'SVD calculation complete... \nComputing U@Ut with k = {k}...')
     UUT = []
     for i in range(10):
         UUT.append(U[i,:,:k]@U[i,:,:k].T)
     
     print('Training complete!')
     return U, S, Vt, np.array(UUT)
+def UUT_update(U, k):
+    UUT = []
+    for i in range(10):
+        UUT.append(U[i,:,:k]@U[i,:,:k].T)
+    return np.array(UUT)

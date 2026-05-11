@@ -20,4 +20,5 @@ def plotDigit(Ui, i, numPlots = 3):
         axs[j//5,j-j//5*5].axis('off')
     plt.show()
 
-plotDigit(U, 3,16)
+plotDigit(U, 3,3)
+plotDigit(U, 8,3)
