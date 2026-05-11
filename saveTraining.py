@@ -1,7 +1,7 @@
 import numpy as np
 import training
 
-k=20
+k=15
 U, S, Vt, UUTk = training.trainLM(k)
 
 np.save('TrainingData/U_trained', U)

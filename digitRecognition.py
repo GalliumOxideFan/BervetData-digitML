@@ -8,5 +8,5 @@ def whichNumber(d):
 
     minRes = np.min(res, axis=0)
 
-    identifiedDigits = np.int32(np.where(res==minRes))[0][0]
+    identifiedDigits = np.argmin(res, axis=0)
     return identifiedDigits
